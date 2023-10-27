@@ -2337,7 +2337,7 @@ runFunction(function()
 	local AimSpeed = {Value = 1}
 	local AimAssistTargetFrame = {Players = {Enabled = false}}
 	AimAssist = GuiLibrary.ObjectsThatCanBeSaved.CombatWindow.Api.CreateOptionsButton({
-		Name = "TargetLook",
+		Name = "TargetLock",
 		Function = function(callback)
 			if callback then
 				RunLoops:BindToRenderStep("AimAssist", function(dt)
@@ -2478,7 +2478,7 @@ runFunction(function()
 	autoclickercps = autoclicker.CreateTwoSlider({
 		Name = "CPS",
 		Min = 1,
-		Max = 100000,
+		Max = 800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
 		Function = function(val) end,
 		Default = 8,
 		Default2 = 12
@@ -2496,7 +2496,7 @@ runFunction(function()
 
 	local noclickfunc
 	noclickdelay = GuiLibrary.ObjectsThatCanBeSaved.CombatWindow.Api.CreateOptionsButton({
-		Name = "RemoveClickDelay",
+		Name = "ClickDelayRemover",
 		Function = function(callback)
 			if callback then
 				noclickfunc = bedwars.SwordController.isClickingTooFast
@@ -2515,7 +2515,7 @@ end)
 runFunction(function()
 	local ReachValue = {Value = 14}
 	Reach = GuiLibrary.ObjectsThatCanBeSaved.CombatWindow.Api.CreateOptionsButton({
-		Name = "HitFix 2.0",
+		Name = "Reach",
 		Function = function(callback)
 			if callback then
 				bedwars.CombatConstant.RAYCAST_SWORD_CHARACTER_DISTANCE = ReachValue.Value + 2
@@ -2580,7 +2580,7 @@ runFunction(function()
 	local VelocityVertical = {Value = 100}
 	local applyKnockback
 	Velocity = GuiLibrary.ObjectsThatCanBeSaved.CombatWindow.Api.CreateOptionsButton({
-		Name = "AntiKnockBack",
+		Name = "AntiKnockback",
 		Function = function(callback)
 			if callback then
 				applyKnockback = bedwars.KnockbackUtil.applyKnockback
@@ -2793,7 +2793,7 @@ runFunction(function()
 	local oldclickhold2
 	local roact 
 	local FastConsume = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-		Name = "FastUse",
+		Name = "FastConsume",
 		Function = function(callback)
 			if callback then
 				oldclickhold = bedwars.ClickHold.startClick
@@ -3077,7 +3077,7 @@ runFunction(function()
 		Min = 1,
 		Max = 100,
 		Function = function(val) end, 
-		Default = 70
+		Default = 44
 	})
 	FlyVertical = Fly.CreateToggle({
 		Name = "Y Level",
@@ -3684,7 +3684,7 @@ runFunction(function()
 	end
 
     Killaura = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-        Name = "Aura",
+        Name = "Killaura",
         Function = function(callback)
             if callback then
 				if killauraaimcirclepart then killauraaimcirclepart.Parent = gameCamera end
@@ -3711,7 +3711,7 @@ runFunction(function()
 											end
 											killauracurrentanim = tweenService:Create(gameCamera.Viewmodel.RightHand.RightWrist, TweenInfo.new(v.Time), {C0 = originalArmC0 * v.CFrame})
 											killauracurrentanim:Play()
-											task.wait(v.Time - 0)
+											task.wait(v.Time - 0.01)
 										end
 										killauraplaying = false
 									end
@@ -3947,7 +3947,7 @@ runFunction(function()
     killaurarange = Killaura.CreateSlider({
         Name = "Attack range",
         Min = 1,
-        Max = 20,
+        Max = 18,
         Function = function(val) 
 			if killaurarangecirclepart then 
 				killaurarangecirclepart.Size = Vector3.new(val * 0.7, 0.01, val * 0.7)
@@ -3973,7 +3973,7 @@ runFunction(function()
 	local oldraise
 	local oldeffect
 	killauraautoblock = Killaura.CreateToggle({
-		Name = "AutoShield",
+		Name = "AutoBlock",
 		Function = function(callback)
 			if callback then 
 				oldviewmodel = bedwars.ViewmodelController.setHeldItem
@@ -4205,7 +4205,7 @@ runFunction(function()
 		HoverText = "Times animation with hit attempt"
     })
 	killauranovape = Killaura.CreateToggle({
-		Name = "NoAuraVape",
+		Name = "No Vape",
 		Function = function() end,
 		HoverText = "no hit vape user"
 	})
@@ -4614,7 +4614,7 @@ runFunction(function()
 	local BowAimbotPart = {Value = "HumanoidRootPart"}
 	local BowAimbotFOV = {Value = 1000}
 	local BowAimbot = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-		Name = "BowAimBot",
+		Name = "BowAimbot",
 		Function = function(callback)
 			if callback then
 				oldCalculateAim = bedwars.ProjectileController.calculateImportantLaunchValues
@@ -4766,7 +4766,7 @@ runFunction(function()
 
 	local oldspeed
 	Scaffold = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-		Name = "BlocksBuilder",
+		Name = "BlockBuilder",
 		Function = function(callback)
 			if callback then
 				scaffoldtext.Visible = ScaffoldBlockCount.Enabled
@@ -4983,7 +4983,7 @@ runFunction(function()
 	SpeedValue = Speed.CreateSlider({
 		Name = "Speed",
 		Min = 1,
-		Max = 23,
+		Max = 30,
 		Function = function(val) end,
 		Default = 23
 	})
@@ -5182,8 +5182,8 @@ runFunction(function()
 	})
 	TargetStrafeRange = TargetStrafe.CreateSlider({
 		Name = "Range",
-		Min = 20,
-		Max = 20,
+		Min = 0,
+		Max = 18,
 		Function = function() end
 	})
 end)
@@ -5466,7 +5466,7 @@ runFunction(function()
 	end
 
 	ChestESP = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		Name = "ChestESP",
+		Name = "ItemESP",
 		Function = function(callback)
 			if callback then
 				task.spawn(function()
@@ -5588,7 +5588,7 @@ runFunction(function()
 	end
 
 	FPSBoost = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		Name = "FpsBooster",
+		Name = "FPS booster",
 		Function = function(callback)
 			local damagetab = debug.getupvalue(bedwars.DamageIndicator, 2)
 			if callback then
@@ -5664,7 +5664,7 @@ runFunction(function()
 	local GameFixer = {Enabled = false}
 	local GameFixerHit = {Enabled = false}
 	GameFixer = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		Name = "HitFix",
+		Name = "HitFixer",
 		Function = function(callback)
 			if callback then
 				if GameFixerHit.Enabled then 
@@ -6130,7 +6130,7 @@ runFunction(function()
 	}
 
 	GameTheme = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		Name = "GameTheme",
+		Name = "ThemeChanger",
 		Function = function(callback) 
 			if callback then 
 				if not transformed then
@@ -6341,7 +6341,7 @@ runFunction(function()
 	end
 
 	KitESP = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		Name = "KitESP",
+		Name = "ESPKit",
 		Function = function(callback) 
 			if callback then
 				task.spawn(function()
@@ -6826,7 +6826,7 @@ runFunction(function()
 	nobobdepth = nobob.CreateSlider({
 		Name = "Depth",
 		Min = 0,
-		Max = 100,
+		Max = 360,
 		Default = 8,
 		Function = function(val)
 			if nobob.Enabled then
@@ -6837,7 +6837,7 @@ runFunction(function()
 	nobobhorizontal = nobob.CreateSlider({
 		Name = "Horizontal",
 		Min = 0,
-		Max = 100,
+		Max = 360,
 		Default = 8,
 		Function = function(val)
 			if nobob.Enabled then
@@ -6848,7 +6848,7 @@ runFunction(function()
 	nobobvertical= nobob.CreateSlider({
 		Name = "Vertical",
 		Min = 0,
-		Max = 100,
+		Max = 360,
 		Default = -2,
 		Function = function(val)
 			if nobob.Enabled then
@@ -7057,7 +7057,7 @@ runFunction(function()
 	local balloondebounce = false
 	local AutoBalloon = {Enabled = false}
 	AutoBalloon = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
-		Name = "AutoUseBalloon", 
+		Name = "BalloonUse", 
 		Function = function(callback)
 			if callback then
 				task.spawn(function()
@@ -7921,7 +7921,7 @@ runFunction(function()
 	end
 
 	AutoConsume = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
-		Name = "AutoConsume",
+		Name = "AutoUse",
 		Function = function(callback)
 			if callback then
 				table.insert(AutoConsume.Connections, vapeEvents.InventoryAmountChanged.Event:Connect(AutoConsumeFunc))
@@ -8119,7 +8119,7 @@ runFunction(function()
 	end
 
 	AutoKit = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
-		Name = "AutoKit",
+		Name = "KitUser",
 		Function = function(callback)
 			if callback then
 				oldfish = bedwars.FishermanTable.startMinigame
@@ -8335,7 +8335,7 @@ runFunction(function()
 
 	local AutoRelic = {Enabled = false}
 	AutoRelic = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
-		Name = "AutoRelic [PATCHED]",
+		Name = "AutoRelic [Patched]",
 		Function = function(callback)
 			if callback then 
 				task.spawn(function()
@@ -8448,7 +8448,7 @@ runFunction(function()
 	local AutoReportV2 = {Enabled = false}
 	local AutoReportV2Notify = {Enabled = false}
 	AutoReportV2 = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
-		Name = "BetterAutoReport",
+		Name = "BetterAutoReportV2",
 		Function = function(callback)
 			if callback then 
 				task.spawn(function()
@@ -8797,7 +8797,7 @@ runFunction(function()
 	}
 
 	ChestStealer = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
-		Name = "ChestStealer",
+		Name = "ChestAura",
 		Function = function(callback)
 			if callback then
 				task.spawn(function()
@@ -8844,7 +8844,7 @@ end)
 runFunction(function()
 	local FastDrop = {Enabled = false}
 	FastDrop = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
-		Name = "DropFaster",
+		Name = "Dropper",
 		Function = function(callback)
 			if callback then
 				task.spawn(function()
@@ -8935,7 +8935,7 @@ runFunction(function()
 	local PickupRangeRange = {Value = 1}
 	local PickupRange = {Enabled = false}
 	PickupRange = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
-		Name = "LootPickerUp", 
+		Name = "PickupRange", 
 		Function = function(callback)
 			if callback then
 				local pickedup = {}
@@ -9195,7 +9195,7 @@ runFunction(function()
 	local antivoidypos = 0
 	local antivoiding = false
 	AntiVoid = GuiLibrary.ObjectsThatCanBeSaved.WorldWindow.Api.CreateOptionsButton({
-		Name = "AntiFall", 
+		Name = "AntiVoid", 
 		Function = function(callback)
 			if callback then
 				task.spawn(function()
@@ -9923,7 +9923,7 @@ end)
 runFunction(function()
     local Disabler = {Enabled = false}
     Disabler = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
-        Name = "FirewallBypass",
+        Name = "Scythe Disabler",
         Function = function(callback)
             if callback then 
 				task.spawn(function()

@@ -2418,7 +2418,7 @@ runFunction(function()
 	end
 
 	autoclicker = GuiLibrary.ObjectsThatCanBeSaved.CombatWindow.Api.CreateOptionsButton({
-		Name = "AutoClicker",
+		Name = "HoldClicker",
 		Function = function(callback)
 			if callback then
 				table.insert(autoclicker.Connections, inputService.InputBegan:Connect(function(input, gameProcessed)

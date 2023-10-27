@@ -3711,7 +3711,7 @@ runFunction(function()
 											end
 											killauracurrentanim = tweenService:Create(gameCamera.Viewmodel.RightHand.RightWrist, TweenInfo.new(v.Time), {C0 = originalArmC0 * v.CFrame})
 											killauracurrentanim:Play()
-											task.wait(v.Time - 0.01)
+											task.wait(v.Time - 0)
 										end
 										killauraplaying = false
 									end

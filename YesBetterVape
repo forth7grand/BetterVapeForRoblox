@@ -2793,7 +2793,7 @@ runFunction(function()
 	local oldclickhold2
 	local roact 
 	local FastConsume = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-		Name = "FastConsume",
+		Name = "FastUse",
 		Function = function(callback)
 			if callback then
 				oldclickhold = bedwars.ClickHold.startClick
@@ -4983,7 +4983,7 @@ runFunction(function()
 	SpeedValue = Speed.CreateSlider({
 		Name = "Speed",
 		Min = 1,
-		Max = 30,
+		Max = 23,
 		Function = function(val) end,
 		Default = 23
 	})
